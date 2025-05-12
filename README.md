@@ -1,83 +1,70 @@
-Course Management System
+# 📚 Course Management System
 
-Overview
+A Windows Forms (WinForms) application built with C# for managing courses, students, and teachers, with integrated financial tracking and data visualization. This desktop app is powered by Microsoft SQL Server for backend data management and supports dynamic reporting and XML export.
 
-This is a C# WinForms application designed to assist with course management. The system enables users to register and manage courses, teachers, and students while keeping track of payments. The application uses a Microsoft SQL Server (MS SQL) local database for data storage.
+---
 
-Features
+## 🧩 Features
 
-Data Management
+### 👥 Data Management
+- Add, edit, and remove **courses**, **teachers**, and **students**.
+- Track **student payments** and **billing information**.
+- Manage **student enrollment** per course.
 
-Add new courses, teachers, and students.
+### 📘 Course Lifecycle
+- Courses require **minimum 4** and a maximum of **8 students** to start.
+- Courses are **inactive by default** and must be manually activated.
+- On activation, set **start date** and **cost per student**.
+- Courses can be **closed** by setting an **end date**.
 
-Modify existing records.
+### 📊 Queries & Reports
+- Search for teachers and list their associated courses (active & closed).
+- Modify active course details as needed.
+- Generate:
+  - **Pie charts** showing student distribution per teacher over time.
+  - **Line charts** for revenue trends across courses.
+- Export course details and student lists to **XML**.
 
-Track student payments.
+---
 
-Store billing information for students.
+## 🛠️ Tech Stack
 
-Course Handling
+| Technology | Description |
+|-----------|-------------|
+| **C# WinForms** | User interface and desktop functionality |
+| **Microsoft SQL Server** | Data persistence and relational storage |
+| **System.Windows.Forms.DataVisualization** | Built-in charting for visual analytics |
+| **XML Serialization** | Exporting structured data for backup or sharing |
 
-A course requires at least 4 students to start and can have a maximum of 8 students.
+---
 
-Courses are inactive by default and must be manually activated once requirements are met.
+## 🚀 Getting Started
 
-Store the start date and cost per student when a course is activated.
+### ✅ Prerequisites
+- Microsoft SQL Server (running locally or remotely)
+- .NET Framework (compatible with WinForms)
 
-Close a course by setting its end date.
+### 📦 Installation
 
-Queries & Reports
-
-Search teachers and list their courses (including closed ones).
-
-Modify active courses.
-
-Generate a pie chart showing student enrollment per teacher for a selected time range.
-
-Generate a line chart displaying revenue trends from all courses for a selected time range.
-
-Export course details and student lists to XML.
-
-Technologies Used
-
-C# WinForms for UI development
-
-Microsoft SQL Server (MS SQL) for data storage
-
-System.Windows.Forms.DataVisualization for charting
-
-XML serialization for data export
-
-Getting Started
-
-Prerequisites
-
-Microsoft SQL Server (Ensure it is installed and running)
-
-.NET Framework (Compatible version)
-
-Installation
-
-Clone the repository:
-
+```bash
 git clone https://github.com/yourusername/course-management-system.git
+```
 
-Open the project in Visual Studio.
+## 🧪 Usage
 
-Configure the database connection string in app.config.
+- Create and manage **teachers**, **students**, and **courses**.
+- Register students into courses and activate courses when criteria are met.
+- Track and manage **payments**.
+- View **analytics** via charts.
+- Export course and student data to **XML** for offline use or reporting.
 
-Run the SQL scripts (if provided) to set up the database schema.
+## 🧑‍💻 Author
 
-Build and run the project.
+**DraymeM** – Desktop Application Developer, Database Architect
 
-Usage
+## 🙌 Acknowledgments
 
-Add Teachers, Students, and Courses.
+- Microsoft Docs and SQL Server community for guidance on best practices  
+- .NET WinForms and Data Visualization libraries  
+- XML serialization resources for structured data handling
 
-Register students for courses.
-
-Activate courses once the minimum student requirement is met.
-
-Track payments and view financial reports.
-
-Analyze data with charts and export information to XML.
